@@ -75,6 +75,7 @@ router.beforeEach((to, from, next) => {
     const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true';
   
     if (to.meta.requiresAuth && !isAuthenticated) {
+      // 如果目标路由需要认证且用户未通过验证，重定向到登录页面
       next('/login');
     } else {
       // 允许导航
