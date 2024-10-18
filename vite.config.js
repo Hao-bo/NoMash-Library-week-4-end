@@ -6,10 +6,6 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '',
-  build: {
-    outDir: 'dist'
-  },
   plugins: [
     vue(),
     vueDevTools(),
@@ -21,8 +17,3 @@ export default defineConfig({
   }
 })
 
-module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/<NoMash-Library-week-4-end>/'
-    : '/'
-}
